@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <EditText
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email Address"
+        android:textSize="50dp"
+        android:id="@+id/address"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First Name"
+        android:textSize="50dp"
+        android:id="@+id/firstName"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Last Name"
+        android:textSize="50dp"
+        android:id="@+id/lastName"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Username"
+        android:id="@+id/username"
+        android:textSize="50dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:id="@+id/password"
+        android:textSize="50dp"/>
+    <Button
+        android:layout_width="275dp"
+        android:layout_height="100dp"
+        android:textSize="30dp"
+        android:text="Register"
+        android:id="@+id/addUserToDB"/>
+    <Button
+        android:text="Phone Number"
+        android:layout_width="275dp"
+        android:textSize="30dp"
+        android:layout_height="100dp"
+        android:id="@+id/verificationSwitcher"/>
+</LinearLayout>

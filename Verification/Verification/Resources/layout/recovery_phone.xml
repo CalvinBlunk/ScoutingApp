@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:id="@id/recoveryAddress"/>
+    <Button
+        android:layout_width="325dp"
+        android:layout_height="100dp"
+        android:text="Recover Account"
+        android:textSize="30dp"
+        android:id="@id/recover"/>
+    <Button
+        android:layout_width="275dp"
+        android:layout_height="100dp"
+        android:text="Email Address"
+        android:textSize="30dp"
+        android:id="@id/recoverySwitcher"/>
+</LinearLayout>

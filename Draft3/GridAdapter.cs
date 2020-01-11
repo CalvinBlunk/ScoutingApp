@@ -14,6 +14,27 @@ namespace Draft3
 {
     public class GridAdapter : BaseAdapter
     {
+        private ArrayAdapter<string> ad;
+        private readonly string[] teamNumbers = {
+            "254",
+            "1320",
+            "235",
+            "43",
+            "4499",
+            "232",
+            "312",
+            "123",
+            "25",
+            "3452",
+            "1232",
+            "1290",
+            "2299",
+            "867",
+            "90",
+            "99",
+            "723",
+            "112"
+        };
         private readonly Context context;
 
         public GridAdapter(Context c)
@@ -47,29 +68,8 @@ namespace Draft3
             {
                 gridView = (TextView)convertView;
             }
-            gridView.SetText(teamNumbers[position]);
+            gridView.SetText(Int32.Parse(teamNumbers[position]));
             return gridView;
         }
-
-        private readonly int[] teamNumbers = {
-            254,
-            1320,
-            235,
-            43,
-            4499,
-            232,
-            312,
-            123,
-            25,
-            3452,
-            1232,
-            1290,
-            2299,
-            867,
-            90,
-            99,
-            723,
-            112                            
-        };
     }
 }

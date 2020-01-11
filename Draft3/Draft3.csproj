@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GridAdapter.cs" />
+    <Compile Include="GridTable.cs" />
     <Compile Include="GridViewActivity.cs" />
     <Compile Include="HomeActivity.cs" />
     <Compile Include="ImageTable.cs" />

@@ -23,13 +23,6 @@ public class GridViewActivity
 			mono.android.TypeManager.Activate ("Draft3.GridViewActivity, Draft3", "", this, new java.lang.Object[] {  });
 	}
 
-	public GridViewActivity (android.content.Context p0)
-	{
-		super ();
-		if (getClass () == GridViewActivity.class)
-			mono.android.TypeManager.Activate ("Draft3.GridViewActivity, Draft3", "Android.Content.Context, Mono.Android", this, new java.lang.Object[] { p0 });
-	}
-
 
 	public void onCreate (android.os.Bundle p0)
 	{

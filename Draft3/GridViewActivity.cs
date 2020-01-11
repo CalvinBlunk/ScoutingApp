@@ -15,32 +15,42 @@ namespace Draft3
     [Activity(Label = "GridView")]
     public class GridViewActivity : Activity
     {
-        private Context context;
         GridView grid;
-        public GridViewActivity(Context context)
-        {
-            this.context = context;
-        }
-        public GridViewActivity()
-        {
-        }
-
+        private ArrayAdapter<string> ad;
+        private readonly string[] teamNumbers = new string[]{
+            "254",
+            "1320",
+            "235",
+            "43",
+            "4499",
+            "232",
+            "312",
+            "123",
+            "25",
+            "3452",
+            "1232",
+            "1290",
+            "2299",
+            "867",
+            "90",
+            "99",
+            "723",
+            "112"
+        };
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.grid_layout);
             grid = FindViewById<GridView>(Resource.Id.gridview);
-            grid.Adapter = new GridAdapter(this);
 
-            grid.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs args)
-            {
-                Toast.MakeText(this, "You Have Clicked an Item", ToastLength.Short).Show();
-            };
-        }
-        public static explicit operator GridViewActivity(View v)
-        {
-            throw new NotImplementedException();
+            
+            ad = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, teamNumbers);
+            grid.Adapter = ad;
+                grid.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs args)
+                {
+                    Toast.MakeText(this, "You Have Clicked: " + grid.SelectedView, ToastLength.Short).Show();
+                };
         }
     }
 }

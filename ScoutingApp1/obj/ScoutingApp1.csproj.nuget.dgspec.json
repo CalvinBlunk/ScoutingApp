@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\ScoutingApp\\ScoutingApp1\\ScoutingApp1.csproj": {}
+    "C:\\Users\\Lyndsey\\source\\repos\\Scouting_App_Contributions\\ScoutingApp1\\ScoutingApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\ScoutingApp\\ScoutingApp1\\ScoutingApp1.csproj": {
+    "C:\\Users\\Lyndsey\\source\\repos\\Scouting_App_Contributions\\ScoutingApp1\\ScoutingApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\ScoutingApp\\ScoutingApp1\\ScoutingApp1.csproj",
+        "projectUniqueName": "C:\\Users\\Lyndsey\\source\\repos\\Scouting_App_Contributions\\ScoutingApp1\\ScoutingApp1.csproj",
         "projectName": "ScoutingApp1",
-        "projectPath": "C:\\Users\\User\\Documents\\ScoutingApp\\ScoutingApp1\\ScoutingApp1.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\ScoutingApp\\ScoutingApp1\\obj\\",
+        "projectPath": "C:\\Users\\Lyndsey\\source\\repos\\Scouting_App_Contributions\\ScoutingApp1\\ScoutingApp1.csproj",
+        "packagesPath": "C:\\Users\\Lyndsey\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lyndsey\\source\\repos\\Scouting_App_Contributions\\ScoutingApp1\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lyndsey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

@@ -12,13 +12,6 @@ namespace Draft3
     public class MainActivity : AppCompatActivity
     {
         Button appBegin;
-
-        readonly string[] permissionsask =
-        {
-            Manifest.Permission.ReadExternalStorage,
-            Manifest.Permission.WriteExternalStorage,
-            Manifest.Permission.Camera
-        };
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -31,10 +24,6 @@ namespace Draft3
             {
                 StartActivity(typeof(HomeActivity));
             };
-        }
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
-        {
-            Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 }

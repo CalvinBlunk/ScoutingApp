@@ -10,6 +10,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Plugin.CurrentActivity;
 using Plugin.Media;
 using SQLite;
 
@@ -21,15 +22,21 @@ namespace Draft3
         Button toData;
         Button takePhotos;
         Button viewData;
+        readonly string[] permissionsask =
+{
+            Manifest.Permission.ReadExternalStorage,
+            Manifest.Permission.WriteExternalStorage,
+            Manifest.Permission.Camera
+        };
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.home_display);
-
+            //RequestPermissions(permissionsask, 0);
             toData = FindViewById<Button>(Resource.Id.buttonHome1);
             takePhotos = FindViewById<Button>(Resource.Id.buttonHome2);
             viewData = FindViewById<Button>(Resource.Id.buttonHome3);
-
+            CrossCurrentActivity.Current.Init(this, savedInstanceState);
             CreateDB();
 
             takePhotos.Click += TakePhoto;
@@ -51,13 +58,17 @@ namespace Draft3
             output += "\n Database Created";
             return output;
         }
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissionsask, Android.Content.PM.Permission[] grantResults)
+        {
+            Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissionsask, grantResults);
+        }
         async void TakePhoto(object sender, System.EventArgs e)
         {
             string dpPath = System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "ScoutingApp.db3");
             var db = new SQLiteConnection(dpPath);
             db.CreateTable<ImageTable>();
             ImageTable tbl = new ImageTable();
-            var userdata = FindViewById<EditText>(Resource.Id.edittextT);
+            
 
             await CrossMedia.Current.Initialize();
 
@@ -82,6 +93,7 @@ namespace Draft3
             View view = layoutInflater.Inflate(Resource.Layout.photo_alert, null);
             Android.Support.V7.App.AlertDialog.Builder alertbuilder = new Android.Support.V7.App.AlertDialog.Builder(this);
             alertbuilder.SetView(view);
+            var userdata = view.FindViewById<EditText>(Resource.Id.edittextT);
 
             alertbuilder.SetCancelable(false).SetPositiveButton("Submit", delegate
             {

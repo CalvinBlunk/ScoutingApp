@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace Draft3
 {
-    class ImageTable
+    public class ImageTable
     {
         public int Id { get; set; }
         public int Team { get; set; }

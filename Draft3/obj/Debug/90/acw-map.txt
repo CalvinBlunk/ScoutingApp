@@ -4,6 +4,9 @@ draft3.GridViewActivity;crc64d6cce91cbfa85221.GridViewActivity
 Draft3.HomeActivity, Draft3;crc64d6cce91cbfa85221.HomeActivity
 Draft3.HomeActivity;crc64d6cce91cbfa85221.HomeActivity
 draft3.HomeActivity;crc64d6cce91cbfa85221.HomeActivity
+Draft3.ImageAdapter, Draft3;crc64d6cce91cbfa85221.ImageAdapter
+Draft3.ImageAdapter;crc64d6cce91cbfa85221.ImageAdapter
+draft3.ImageAdapter;crc64d6cce91cbfa85221.ImageAdapter
 Draft3.MainActivity, Draft3;crc64d6cce91cbfa85221.MainActivity
 Draft3.MainActivity;crc64d6cce91cbfa85221.MainActivity
 draft3.MainActivity;crc64d6cce91cbfa85221.MainActivity

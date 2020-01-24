@@ -1,0 +1,16 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="320px"
+        android:layout_height="240px"
+        android:padding="20px"
+        android:scaleType="fitCenter"
+        android:maxHeight="500px"
+        android:maxWidth="500px"
+        android:layout_gravity="center"
+        android:src="@drawable/highlanders"
+        android:id="@+id/ImageViewR"/>
+</LinearLayout>

@@ -27,6 +27,9 @@ namespace Draft3
         public string Build { get; set; }
         public string Electronics { get; set; }
         public string Chassis { get; set; }
+        public string Spinner { get; set; }
+        public string Cameras { get; set; }
+        public string Climb { get; set; }
         public string Notes { get; set; }
         public string User { get; set; }
         public override string ToString() { return $"[PitsTable: id={Id}, Team={Team}]"; }

@@ -43,6 +43,12 @@ namespace Draft3
         RadioButton q3;
         RadioButton q4;
         RadioButton q5;
+        RadioButton sy;
+        RadioButton sn;
+        RadioButton cy;
+        RadioButton cn;
+        RadioButton cLy;
+        RadioButton cLn;
         EditText notes;
         Button save;
         Button home;
@@ -78,6 +84,12 @@ namespace Draft3
             q3 = FindViewById<RadioButton>(Resource.Id.radioPS8);
             q4 = FindViewById<RadioButton>(Resource.Id.radioPS9);
             q5 = FindViewById<RadioButton>(Resource.Id.radioPS10);
+            sy = FindViewById<RadioButton>(Resource.Id.radioPS51);
+            sn = FindViewById<RadioButton>(Resource.Id.radioPS52);
+            cy = FindViewById<RadioButton>(Resource.Id.radioPS61);
+            cn = FindViewById<RadioButton>(Resource.Id.radioPS62);
+            cLy = FindViewById<RadioButton>(Resource.Id.radioPS71);
+            cLn = FindViewById<RadioButton>(Resource.Id.radioPS72);
             notes = FindViewById<EditText>(Resource.Id.editTextPS2);
             save = FindViewById<Button>(Resource.Id.buttonPS1);
             home = FindViewById<Button>(Resource.Id.buttonPS2);
@@ -211,6 +223,45 @@ namespace Draft3
                     Toast.MakeText(this, "Please Select an Overall Build Grade", ToastLength.Long).Show();
                 }
 
+                if (sy.Checked)
+                {
+                    pits.Spinner = "Yes";
+                }
+                else if (sn.Checked)
+                {
+                    pits.Spinner = "No";
+                }
+                else
+                {
+                    Toast.MakeText(this, "Select if Spinner Can Be Used", ToastLength.Long).Show();
+                }
+
+                if (cy.Checked)
+                {
+                    pits.Cameras = "Yes";
+                }
+                else if (cn.Checked)
+                {
+                    pits.Cameras = "No";
+                }
+                else 
+                {
+                    Toast.MakeText(this, "Select if Robot has Driver Cameras", ToastLength.Long).Show();
+                }
+
+                if (cLy.Checked)
+                {
+                    pits.Climb = "Yes";
+                }
+                else if (cLn.Checked)
+                {
+                    pits.Climb = "No";
+                }
+                else
+                {
+                    Toast.MakeText(this, "Select if Robot Can Climb", ToastLength.Long).Show();
+                }
+                
                 pits.Notes = notes.Text;
 
                db.Insert(pits);
